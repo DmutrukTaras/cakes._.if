@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #573b34;
+  background: #fffaf5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(185, 95, 104, 0.05) 25%, transparent 25%) 0 0 / 28px 28px,
+    linear-gradient(45deg, rgba(200, 149, 67, 0.06) 10%, transparent 10%) 0 0 / 34px 34px,
+    linear-gradient(180deg, #fffaf5 0%, #fff7ee 46%, #ffffff 100%);
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reveal {
+  animation: reveal 0.7s ease both;
+}
+
+.hero-visual {
+  background:
+    linear-gradient(135deg, rgba(255, 250, 245, 0.15), rgba(255, 255, 255, 0.45)),
+    url("/images/site/hero-cake.png") center / cover no-repeat;
+}
+
+.preview-cakes {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(87, 59, 52, 0.24)),
+    url("/images/site/cakes-preview.png") center / cover no-repeat;
+}
+
+.preview-bar {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(87, 59, 52, 0.24)),
+    url("/images/site/bar-preview.png") center / cover no-repeat;
+}
+
+.preview-sets {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(87, 59, 52, 0.24)),
+    url("/images/site/sets-preview.png") center / cover no-repeat;
+}
+
+.wow-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.wow-panel::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.7), rgba(248, 216, 208, 0.72), rgba(200, 149, 67, 0.34));
+  opacity: 0.9;
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: -80% auto -80% -45%;
+  width: 32%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  animation: shine 5.4s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: floatSlow 6.5s ease-in-out infinite;
+}
+
+.float-delay {
+  animation: floatSlow 7.5s ease-in-out infinite 1.2s;
+}
+
+.contact-fab {
+  animation: fabIn 0.7s cubic-bezier(0.2, 0.9, 0.2, 1) both 0.35s;
+}
+
+.modal-overlay-in {
+  animation: overlayIn 0.22s ease both;
+}
+
+.modal-overlay-out {
+  animation: overlayOut 0.22s ease both;
+}
+
+.modal-card-in {
+  animation: modalIn 0.34s cubic-bezier(0.2, 0.95, 0.22, 1) both;
+}
+
+.modal-card-out {
+  animation: modalOut 0.22s ease both;
+}
+
+.sprinkle-frame {
+  background:
+    linear-gradient(90deg, rgba(185, 95, 104, 0.2) 0 8px, transparent 8px 100%) 18px 22px / 54px 54px,
+    linear-gradient(90deg, rgba(200, 149, 67, 0.22) 0 8px, transparent 8px 100%) 2px 4px / 62px 62px,
+    rgba(255, 255, 255, 0.72);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0%,
+  52% {
+    transform: translateX(0) rotate(18deg);
+  }
+  78%,
+  100% {
+    transform: translateX(520%) rotate(18deg);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+@keyframes fabIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes modalOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+    filter: blur(6px);
+  }
+}
