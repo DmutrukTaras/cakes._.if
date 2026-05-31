@@ -4,6 +4,7 @@ export const categories = [
     description:
       "Класичні, дитячі, бенто та святкові торти з індивідуальним дизайном.",
     href: "/cakes",
+    image: "/images/site/cakes-preview.png",
     imageClass: "preview-cakes",
   },
   {
@@ -11,6 +12,7 @@ export const categories = [
     description:
       "Капкейки, трайфли, макаронс, кейк-попси та порційні десерти для подій.",
     href: "/candy-bar",
+    image: "/images/site/bar-preview.png",
     imageClass: "preview-bar",
   },
   {
@@ -18,6 +20,7 @@ export const categories = [
     description:
       "Подарункові та святкові бокси, які можна зібрати під конкретну людину.",
     href: "/sets",
+    image: "/images/site/sets-preview.png",
     imageClass: "preview-sets",
   },
 ];

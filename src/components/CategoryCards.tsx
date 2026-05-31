@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { categories } from "../data/categories";
+import { publicAsset } from "../utils/assets";
 import SectionTitle from "./SectionTitle";
 
 export default function CategoryCards() {
@@ -18,7 +19,14 @@ export default function CategoryCards() {
             to={category.href}
             className="group overflow-hidden rounded-3xl border border-rose/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-soft"
           >
-            <div className={`${category.imageClass} h-64`} />
+            <div className="h-64 overflow-hidden">
+              <img
+                src={publicAsset(category.image)}
+                alt={category.title}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
             <div className="p-6">
               <div className="flex items-center justify-between gap-4">
                 <h3 className="font-serif text-2xl font-bold text-cocoa">{category.title}</h3>

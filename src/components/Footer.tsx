@@ -1,6 +1,7 @@
 import { Instagram, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { siteConfig } from "../data/siteConfig";
+import { publicAsset } from "../utils/assets";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={siteConfig.logo}
+              src={publicAsset(siteConfig.logo)}
               alt={siteConfig.brandName}
               className="h-14 w-14 rounded-full border border-rose/15 object-cover"
             />

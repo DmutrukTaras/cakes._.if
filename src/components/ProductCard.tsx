@@ -1,3 +1,4 @@
+import { publicAsset } from "../utils/assets";
 import Button from "./Button";
 import { useContactModal } from "./ContactModal";
 
@@ -9,6 +10,12 @@ type ProductCardProps = {
   imageClass?: string;
 };
 
+const previewImages: Record<string, string> = {
+  "preview-cakes": "/images/site/cakes-preview.png",
+  "preview-bar": "/images/site/bar-preview.png",
+  "preview-sets": "/images/site/sets-preview.png",
+};
+
 export default function ProductCard({
   title,
   description,
@@ -17,13 +24,15 @@ export default function ProductCard({
   imageClass = "preview-sets",
 }: ProductCardProps) {
   const { openOrder } = useContactModal();
+  const fallbackImage = previewImages[imageClass];
+  const displayImage = image || fallbackImage;
 
   return (
     <article className="overflow-hidden rounded-3xl border border-rose/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-      <div className={`${image ? "bg-cream" : imageClass} aspect-[4/3] overflow-hidden`}>
-        {image ? (
+      <div className="aspect-[4/3] overflow-hidden bg-cream">
+        {displayImage ? (
           <img
-            src={image}
+            src={publicAsset(displayImage)}
             alt={title}
             className="h-full w-full object-cover transition duration-500 hover:scale-105"
             loading="lazy"

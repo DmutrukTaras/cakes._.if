@@ -38,27 +38,21 @@ input {
 }
 
 .hero-visual {
-  background:
-    linear-gradient(135deg, rgba(255, 250, 245, 0.15), rgba(255, 255, 255, 0.45)),
-    url("/images/site/hero-cake.png") center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .preview-cakes {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(87, 59, 52, 0.24)),
-    url("/images/site/cakes-preview.png") center / cover no-repeat;
+  background: #fff7ee;
 }
 
 .preview-bar {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(87, 59, 52, 0.24)),
-    url("/images/site/bar-preview.png") center / cover no-repeat;
+  background: #fff7ee;
 }
 
 .preview-sets {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(87, 59, 52, 0.24)),
-    url("/images/site/sets-preview.png") center / cover no-repeat;
+  background: #fff7ee;
 }
 
 .wow-panel {

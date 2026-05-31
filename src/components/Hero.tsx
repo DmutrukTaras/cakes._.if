@@ -1,6 +1,7 @@
 import { ArrowRight, Instagram, MessageCircle } from "lucide-react";
 import { pagesContent } from "../data/pagesContent";
 import { siteConfig } from "../data/siteConfig";
+import { publicAsset } from "../utils/assets";
 import Button from "./Button";
 import { useContactModal } from "./ContactModal";
 
@@ -37,12 +38,17 @@ export default function Hero() {
 
         <div className="reveal relative min-h-[560px]">
           <div className="wow-panel rounded-[2.3rem] p-2 shadow-soft">
-            <div className="hero-visual shine h-[560px] rounded-[2rem] border border-white/80 shadow-soft" />
+            <div
+              className="hero-visual shine h-[560px] rounded-[2rem] border border-white/80 shadow-soft"
+              style={{
+                backgroundImage: `linear-gradient(135deg, rgba(255, 250, 245, 0.15), rgba(255, 255, 255, 0.45)), url("${publicAsset("/images/site/hero-cake.png")}")`,
+              }}
+            />
           </div>
 
           <div className="float-slow absolute -left-2 top-10 hidden w-36 overflow-hidden rounded-3xl border-4 border-white bg-white shadow-soft sm:block lg:-left-10">
             <img
-              src="/images/site/cakes-preview.png"
+              src={publicAsset("/images/site/cakes-preview.png")}
               alt="Приклад торта cake._.if"
               className="aspect-[4/5] w-full object-cover"
             />
@@ -50,7 +56,7 @@ export default function Hero() {
 
           <div className="float-delay absolute -right-2 bottom-20 hidden w-40 overflow-hidden rounded-3xl border-4 border-white bg-white shadow-soft sm:block lg:-right-8">
             <img
-              src="/images/site/cakes-lilac.png"
+              src={publicAsset("/images/site/cakes-lilac.png")}
               alt="Приклад ніжного торта"
               className="aspect-[4/5] w-full object-cover"
             />

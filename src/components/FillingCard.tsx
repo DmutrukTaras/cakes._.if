@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Filling } from "../data/fillings";
 import { fillingPrices } from "../data/prices";
+import { publicAsset } from "../utils/assets";
 
 export default function FillingCard({ filling }: { filling: Filling }) {
   const [imageMissing, setImageMissing] = useState(false);
@@ -16,7 +17,7 @@ export default function FillingCard({ filling }: { filling: Filling }) {
           </div>
         ) : (
           <img
-            src={filling.image}
+            src={publicAsset(filling.image)}
             alt={filling.name}
             className="h-full w-full object-cover"
             loading="lazy"

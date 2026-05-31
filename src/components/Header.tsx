@@ -2,6 +2,7 @@ import { Menu, Sparkles, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { siteConfig } from "../data/siteConfig";
+import { publicAsset } from "../utils/assets";
 import Button from "./Button";
 import { useContactModal } from "./ContactModal";
 
@@ -37,7 +38,7 @@ export default function Header() {
             >
               <span className="grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-2xl border border-rose/15 bg-white p-1 shadow-sm transition duration-500 group-hover:-rotate-3 group-hover:scale-105">
                 <img
-                  src={siteConfig.logo}
+                  src={publicAsset(siteConfig.logo)}
                   alt={siteConfig.brandName}
                   className="h-full w-full rounded-xl object-cover"
                 />

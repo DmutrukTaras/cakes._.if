@@ -9,6 +9,7 @@ import Button from "../components/Button";
 import { galleryConfig } from "../data/galleryConfig";
 import { pagesContent } from "../data/pagesContent";
 import { siteConfig } from "../data/siteConfig";
+import { publicAsset } from "../utils/assets";
 
 const reasons = [
   { title: "Індивідуальний дизайн", icon: Sparkles },
@@ -39,7 +40,7 @@ export default function HomePage() {
                 }`}
               >
                 <img
-                  src={src}
+                  src={publicAsset(src)}
                   alt={alt}
                   className="aspect-[4/5] h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"

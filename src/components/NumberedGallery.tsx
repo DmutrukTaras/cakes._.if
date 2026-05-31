@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { supportedGalleryExtensions } from "../data/galleryConfig";
+import { publicAsset } from "../utils/assets";
 import GalleryLightbox from "./GalleryLightbox";
 import SectionTitle from "./SectionTitle";
 
@@ -18,7 +19,7 @@ type CandidateImage = {
 };
 
 function buildPath(folder: string, number: number, extension: string) {
-  return `${folder}/${number}${extension}`;
+  return publicAsset(`${folder}/${number}${extension}`);
 }
 
 export default function NumberedGallery({
