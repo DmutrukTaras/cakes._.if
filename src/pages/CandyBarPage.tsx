@@ -18,10 +18,10 @@ export default function CandyBarPage() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {pagesContent.candyBar.desserts.map((dessert) => (
             <ProductCard
-              key={dessert}
-              title={dessert}
-              description="Міні-десерт у стилі вашого свята: ніжний, охайний і зручний для гостей."
-              imageClass="preview-bar"
+              key={dessert.title}
+              title={dessert.title}
+              description={dessert.description}
+              image={dessert.image}
             />
           ))}
         </div>
