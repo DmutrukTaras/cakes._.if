@@ -1,5 +1,5 @@
 export function publicAsset(path: string) {
-  if (/^(https?:|mailto:|tel:|viber:)/.test(path)) {
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(path)) {
     return path;
   }
 
