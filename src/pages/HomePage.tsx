@@ -77,7 +77,7 @@ export default function HomePage() {
       <NumberedGallery
         folder={galleryConfig.cakes.folder}
         title="Наші роботи"
-        description="Прев'ю фото з локальної папки. Більше прикладів можна додати без редагування коду."
+        // description="Прев'ю фото з локальної папки. Більше прикладів можна додати без редагування коду."
         maxImages={12}
       />
 
