@@ -22,6 +22,7 @@ export default function SetsPage() {
               title={product.title}
               description={product.description}
               includes={product.includes}
+              image={product.image}
               imageClass="preview-sets"
             />
           ))}
