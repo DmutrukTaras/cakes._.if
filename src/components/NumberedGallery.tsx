@@ -26,7 +26,7 @@ export default function NumberedGallery({
   folder,
   title,
   description,
-  maxImages = 100,
+  maxImages = 10,
   extensions = supportedGalleryExtensions,
 }: NumberedGalleryProps) {
   const [hiddenNumbers, setHiddenNumbers] = useState<number[]>([]);

@@ -5,9 +5,9 @@ export const siteConfig = {
   city: "Івано-Франківськ",
   instagram: "https://www.instagram.com/cake._.if/",
   telegram: "https://t.me/cake_if",
-  viber: "viber://chat?number=%2B380671234567",
-  phone: "+380 67 123 45 67",
-  phoneHref: "tel:+380671234567",
+  viber: "viber://chat?number=%2B380506120963",
+  phone: "+380 50 612 09 63",
+  phoneHref: "tel:+380506120963",
   shortDescription:
     "Торти на замовлення, кенді-бар і подарункові набори для теплих свят в ІФ.",
   schedule: "Щодня 10:00-20:00, замовлення бажано узгоджувати заздалегідь",
