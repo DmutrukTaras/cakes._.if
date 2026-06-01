@@ -30,7 +30,7 @@ export default function CakesPage() {
       <CakeCalculator />
       <FillingsSection />
       <FAQSection category="cakes" />
-      <NumberedGallery {...galleryConfig.cakes} />
+      <NumberedGallery {...galleryConfig.cakes} maxImages={12} />
       <CTASection title="Готові обрати торт для свята?" buttonText={pagesContent.cakes.cta} />
     </>
   );
